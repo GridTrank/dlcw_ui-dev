@@ -1,0 +1,107 @@
+.header{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	background-color: $uni-bg-color;
+	.page-header {
+		@include flex(row);height: new-sizing(36);
+		align-items: center;
+		padding: 0 new-sizing(15);
+		position: relative;
+		background-color: linear-gradient(119.4deg, #87D3FF 13.53%, #99A9FF 65.51%, #3F7CFF 111.38%);
+		.back {
+			@include flex(row);
+			justify-content: center;
+			align-items: center;
+			.icon {
+				width: new-sizing(28);
+				height: new-sizing(28);
+			}
+		}
+		.title {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			.text {
+				font-size: new-sizing(18);
+				line-height: new-sizing(25);
+			}
+		}
+	}
+}
+.header-holder{
+	height: new-sizing(80);
+}
+.recordlist{
+		width: 100%;
+		@include flex(column)
+		align-items: center;
+		box-sizing: border-box;
+		padding-top: new-sizing(10);
+		.recordlist-item{
+			width: new-sizing(345);height: new-sizing(80);
+			background: $uni-bg-color;
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+			border-radius: new-sizing(6);
+			box-sizing: border-box;
+			@include flex(row);
+			flex-flow: nowrap;
+			padding: new-sizing(5);
+			margin-bottom: new-sizing(10);
+			font-family: 'PingFang SC';
+			position: relative;
+			.item-1{
+				width: new-sizing(68);height: new-sizing(68);
+				background: #E5E5E5;
+				border-radius: new-sizing(6);
+				box-sizing: border-box;
+				@include flex(row)
+				justify-content: center;
+				align-items: center;
+				image{
+					display: block;
+					width: new-sizing(43);height: new-sizing(43);
+					padding: new-sizing(5);
+				}
+			}
+			.item-2{
+				height: 100%;width: new-sizing(230);
+				color: $uni-text-color;
+				@include flex(column)
+				justify-content: space-around;
+				padding-left: new-sizing(10);
+				.name{
+					font-style: normal;
+					font-weight: 600;
+					font-size: new-sizing(14);
+					width: 100%;
+					@include ellipsis();
+				}
+				.endtime{
+					font-weight: 400;
+					font-size: new-sizing(11);
+					color: $uni-text-color;
+					opacity: 0.7;
+					width: 100%;
+					@include ellipsis();
+				}
+				.price{
+					font-weight: 600;
+					width: 100%;
+					@include ellipsis();
+					.icon{
+						font-weight: 600;
+						font-size: new-sizing(5);
+					}
+				}
+			}
+			.right-arrow{
+				width: new-sizing(24); height: new-sizing(24);
+				position: absolute;
+				top: new-sizing(0);bottom: new-sizing(0);right: new-sizing(15);
+				margin: auto;
+			}
+		}
+	}

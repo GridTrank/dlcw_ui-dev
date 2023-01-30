@@ -1,0 +1,53 @@
+export default {
+	LOGIN: 'pages/auth/login/index',
+	LOGIN_BIND: '/pages/auth/login/bind',
+	HOME_PAGE: 'pages/index/index/index',
+
+	APPRECIATION_PAGE: 'pages/appreciation/index/index',
+	APPRECIATION_DETAIL_PAGE: '/pages_appreciation/detail/index',
+	APPRECIATION_SERIES_PAGE: '/pages_appreciation/series/index',
+
+	WELFARE_CLUB_INDEX: 'pages/welfare_club/index/index',
+	INVITE_REBATE_INDEX: 'pages/invite_rebate/index/index',
+	INVITE_REBATE_RANK: 'pages/invite_rebate/rank/index',
+	INVITE_RECORD_INDEX: 'pages/invite_rebate/record/index',
+	DAILY_SIGN: 'pages/daily_sign/index',
+	LOTTERY_PAGE: 'pages/lottery/index/index',
+	LOTTERY_LATEST_PAGE: 'pages/lottery/index2/index2',
+	MISSION_ACHIEVEMENT: 'pages/mission_achievement/index',
+	PROP_CARD_INDEX: 'pages/prop_card/index',
+	AGREEMENT_PAGE: 'pages/agreement/index',
+	SEARCH_PAGE: 'pages/search/index/index',
+	AGREEMENT_PURCHASE_NOTES_PAGE: 'pages/agreement/purchase_notes',
+	//限时秒杀 零元抽
+	SECKILL_DETAIL_PAGE: '/pages_seckill/detail/index',
+	RANKING_INDEX_PAGE: '/pages_seckill/ranking/index',
+	//活动
+	MARKET_PAGE: 'pages/market/index/index',
+	ACTIVE_ZEROBUY_PAGE: '/pages_active/zerobuy/index/index',
+	//我的
+	MY_PAGE: 'pages/my/index/index',
+	MY_SETUP_PAGE: '/pages_my/setup/index',
+	MY_SETUP_CHANGE_PAGE: '/pages_my/setup/modify',
+	MY_SETUP_MODIFYNAME_PAGE: '/pages_my/setup/modify-name',
+	MY_SETUP_PRIVACY_PAGE: '/pages_my/setup/privacy',
+	MY_SETUP_AGREEMENT_PAGE: '/pages_my/setup/agreement',
+	MY_COUPON_PAGE: '/pages_my/coupon/index',
+	MY_BALANCE_PAGE: '/pages_my/balance/index',
+	MY_BALANCE_RECORD_PAGE: '/pages_my/balance/record',
+	MY_RECORD_COST_PAGE: '/pages_my/record/cost/index',
+	MY_RECORD_BOX_PAGE: '/pages_my/record/box/index',
+	MY_RECORD_SELL_PAGE: '/pages_my/record/sell/index',
+	MY_RECORD_DELIVAR_PAGE: '/pages_my/record/delivar/index',
+	MY_ADDRESS_PAGE: '/pages_my/address/index',
+	MY_ADDRESS_ADD_PAGE: '/pages_my/address/addpage',
+	MY_ADDRESS_UPDATE_PAGE: '/pages_my/address/update',
+	MY_BAG_PAGE: '/pages_my/bag/index',
+	MY_BAG_SELL_PAGE: '/pages_my/bag/sell',
+	MY_BAG_SELL_SUCCESS_PAGE: '/pages_my/bag/success',
+	MY_BAG_SENT_PAGE: '/pages_my/bag/sent',
+	MY_BAG_SELECT_ADDRESS_PAGE: '/pages_my/bag/select',
+	MESSAGE_BOX_PAGE: '/pages_my/message_box/index',
+	NOTICE_PAGE: '/pages_my/message_box/notice'
+
+};

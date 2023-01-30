@@ -1,0 +1,282 @@
+.daily-sign {
+	position: relative;
+	.nav-bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: new-sizing(450);
+		width: 100%;
+		background: transparent url(assets('@/static/daily_sign/bg.png')) no-repeat;
+		z-index: -1;
+		border-radius: 0px 0px 0px new-sizing(33);
+	}
+}
+.page-header {
+	@include flex(row);
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 new-sizing(15);
+	height: new-sizing(32);
+
+	//小程序内
+	/*  #ifdef  MP-WEIXIN */
+	height: 32px;
+	/*  #endif */
+	.back {
+		@include flex(row);
+		justify-content: center;
+		align-items: center;
+		.icon {
+			width: new-sizing(28);
+			height: new-sizing(28);
+		}
+	}
+	.title {
+		@include flex(row);
+		justify-content: center;
+		align-items: center;
+		.text {
+			font-size: new-sizing(18);
+			line-height: new-sizing(25);
+		}
+	}
+	.tmp {
+		text {
+			color: transparent;
+		}
+	}
+}
+
+.con {
+	position: relative;
+	padding: new-sizing(30);
+	@include flex(row);
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	.item {
+		@include flex(column);
+		align-items: center;
+		justify-content: center;
+		height: new-sizing(110);
+		width: 20%;
+		position: relative;
+		.text {
+			margin-top: new-sizing(10);
+		}
+		.line {
+			width: 100%;
+			height: 1px;
+			border-bottom: 1px solid #6556FD;
+			position: absolute;
+			bottom: -1px;
+		}
+		.dot {
+			width: new-sizing(5);
+			height: new-sizing(5);
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+
+			bottom: -5rpx;
+			border-radius: 50%;
+			background-color: #fff;
+			z-index: 2;
+			&.finish {
+				background-color: #6556FD;;
+			}
+		}
+
+		@for $i from 0 through 15 {
+			&-#{$i} {
+				order: $i + 1;
+			}
+		}
+
+		//order
+		&-9 {
+			order: 6;
+		}
+		&-8 {
+			order: 7;
+		}
+		&-7 {
+			order: 8;
+		}
+		&-6 {
+			order: 9;
+		}
+		&-5 {
+			order: 10;
+		}
+
+		&-0 {
+			.line {
+				width: 50%;
+				right: 0;
+			}
+		}
+		&-14 {
+			.line {
+				width: 50%;
+				left: 0;
+			}
+		}
+		&-4,
+		&-9,
+		&-5,
+		&-10 {
+			.line {
+				border: none;
+			}
+		}
+		&-5,
+		&-10 {
+			border-top: 1px solid #6556FD;
+			border-right: 1px solid #6556FD;
+			border-top-right-radius: 13px;
+			border-bottom-right-radius: 13px;
+			&:before,
+			&:after {
+				content: '';
+				width: 100%;
+				height: new-sizing(110);
+				display: block;
+				position: absolute;
+				right: 0;
+				border-top: 1px solid #6556FD;
+				border-top-right-radius: 13px;
+			}
+			&:after {
+				top: unset;
+				bottom: -1px;
+				border-top: none;
+				border-bottom: 1px solid #6556FD;
+				border-bottom-right-radius: 13px;
+			}
+		}
+		&-10 {
+			border: none;
+			&:before,
+			&:after {
+				right: unset;
+				left: 0;
+				border: none;
+				border-radius: 13px;
+				border-top: 1px solid #6556FD;
+				border-top-right-radius: 0;
+				border-left: 1px solid #6556FD;
+			}
+			&:after {
+				border-bottom: 1px solid #6556FD;
+				border-bottom-right-radius: 0;
+				border-top: 0;
+			}
+		}
+
+		.box {
+			width: new-sizing(47);
+			height: new-sizing(57);
+			position: relative;
+			border-radius: 8px;
+			.image {
+				width: 100%;
+				height: 100%;
+			}
+			.mask {
+				border-radius: 8px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+
+				background-color: rgba(0, 0, 0, 0.1);
+				z-index: 3;
+				@include flex(row);
+				align-items: center;
+				justify-content: center;
+				&-text {
+					font-size: new-sizing(7);
+					line-height: new-sizing(10);
+					color: #fff;
+					padding: new-sizing(2) new-sizing(5);
+					border: 1px solid #fff;
+					border-radius: new-sizing(10);
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	width: 100%;
+	min-height: new-sizing(200);
+	position: absolute;
+	top: new-sizing(450);
+	background: transparent url(assets('@/static/daily_sign/angle.png')) no-repeat top right;
+	background-size: 100px 30px;
+	@include flex(column);
+	align-items: center;
+	justify-content: center;
+	.button {
+		margin-top: new-sizing(50);
+		width: new-sizing(300);
+		height: new-sizing(48);
+		background: #6556FD;
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		box-shadow: 0px 3px 4px rgba(101, 86, 253, 0.1);
+		border-radius: new-sizing(33);
+		@include flex(row);
+		align-items: center;
+		justify-content: center;
+		.text {
+			color: #fff;
+		}
+	}
+	.tips {
+		margin-top: new-sizing(20);
+		opacity: 0.7;
+	}
+}
+
+.signsuccessshow{
+	width: new-sizing(300);height: new-sizing(300);
+	@include flex(column);
+	align-items: center;
+	position: relative;
+	.img{
+		width: new-sizing(100);height: new-sizing(130);
+		margin-bottom: new-sizing(10);
+		// border: 1px dashed black;
+	}
+	.title{
+		font-weight: 600;
+		font-size: new-sizing(18);
+		color: #6556FD;
+		margin-bottom: new-sizing(10);
+	}
+	.text{
+		font-weight: 600;
+		font-size: new-sizing(14);
+		color: #333C4F;
+		.has{
+			font-weight: 600;
+			font-size: new-sizing(14);
+			color: #6556FD;
+		}
+	}
+	.button{
+		position: absolute;
+		left: 0;right: 0;bottom: new-sizing(20);
+		width: new-sizing(160);height: new-sizing(40);
+		background: #6556FD;
+		border: new-sizing(2) solid rgba(255, 255, 255, 0.3);
+		box-shadow: 0px new-sizing(3) new-sizing(4) rgba(101, 86, 253, 0.1);
+		border-radius: new-sizing(33);
+		font-size: new-sizing(14);
+		line-height: new-sizing(36);
+		color: #FFFFFF;
+		animation: inviteBtnAnimation 1s linear infinite alternate;
+	}
+}

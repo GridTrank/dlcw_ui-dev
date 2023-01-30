@@ -1,0 +1,268 @@
+.pageview {
+	/* #ifndef MP-WEIXIN */
+	height: 100vh;
+	width: 100%;
+	/* #endif */
+	background: $uni-bg-color-grey;
+	width: 100%;height: 100vh;
+	.bg {
+		position: absolute;
+		z-index: 2;
+		width: 100%;
+		height: new-sizing(195);
+		// background: linear-gradient(348.1deg, rgba(249, 249, 249, 0.79) 20.78%, rgba(186, 218, 255, 0.79) 57.34%, rgba(171, 255, 245, 0.79) 89.6%);
+		// backdrop-filter: blur(26px);
+		/* Note: backdrop-filter has minimal browser support */
+		background: url(assets('@/static/my/my-bg.png')) no-repeat;
+		background-size: 100% 100%;
+		border-radius: 0px 0px 10px 10px;
+	}
+	
+	.content {
+		width: 100%;
+		margin: auto;
+		position: relative;
+		z-index: 2;
+		.user-holder{
+			width: 100%;
+			height: new-sizing(36);
+		}
+		.tr-icon {
+			width: new-sizing(345);height: new-sizing(36);
+			margin: auto;
+			padding-top: new-sizing(5);
+			right: new-sizing(0);top: new-sizing(0);
+			@include flex(row);
+			align-items: center;
+			image {
+				padding-top: new-sizing(3);
+				width: new-sizing(20);
+				height: new-sizing(20);
+				padding-bottom: new-sizing(1);
+			}
+			image:nth-child(2) {
+				width: new-sizing(20);
+				height: new-sizing(20);
+				margin-left: new-sizing(10);
+				padding-top: new-sizing(1);
+			}
+		}
+		.userinfo {
+			width: 100%;
+			@include flex(row);
+			margin-bottom: new-sizing(20);
+			box-sizing: border-box;
+			padding: new-sizing(0) new-sizing(20);
+			position: relative;
+			margin-top: new-sizing(20);
+			.userimg {
+				width: new-sizing(54);
+				height: new-sizing(54);
+				border-radius: 50%;
+			}
+			.userinfo-aside {
+				@include flex(column);
+				justify-content: space-around;
+				.username {
+					font-family: 'PingFang SC';
+					font-style: normal;
+					font-weight: 800;
+					font-size: new-sizing(14);
+					color: $uni-text-color;
+				}
+				.usertel {
+					font-family: 'PingFang SC';
+					font-style: normal;
+					font-weight: 400;
+					font-size: new-sizing(11);
+					color: $uni-text-color;
+					opacity: 0.7;
+				}
+				.copy{
+					position: absolute;
+					left: new-sizing(165);bottom: 0;
+					width: new-sizing(15);height: new-sizing(15);
+				}
+				padding-left: new-sizing(10);
+			}
+		}
+		.userinfo2 {
+			width: new-sizing(345);
+			height: new-sizing(66);
+			background: $uni-bg-color;
+			border-radius: new-sizing(6);
+			margin: auto;
+			@include flex(row);
+			align-items: center;
+			margin-bottom: new-sizing(20);
+			.userinfo2-item {
+				flex-basis: 33%;
+				text-align: center;
+				@include flex(column);
+				.num {
+					font-family: 'PingFang SC';
+					font-style: normal;
+					font-weight: 400;
+					font-size: new-sizing(15);
+					color: #6556FD;
+				}
+				.type{
+					font-family: 'PingFang SC';
+					font-style: normal;
+					font-weight: 400;
+					font-size: new-sizing(10);
+					color: $uni-text-color;
+				}
+			}
+			.userinfo2-item2 {
+				flex-basis: 25%;
+				text-align: center;
+				@include flex(column);
+				.img {
+					width: new-sizing(30);
+					height: new-sizing(30);
+					margin: auto;
+					margin-bottom: new-sizing(10);
+				}
+				.type {
+					font-family: 'PingFang SC';
+					font-style: normal;
+					font-weight: 400;
+					font-size: new-sizing(10);
+					color: $uni-text-color;
+				}
+			}
+		}
+		.userinfo3 {
+			width: new-sizing(345);
+			height: new-sizing(165);
+			margin: auto;
+			@include flex(row)
+			justify-content: space-between;
+			margin-bottom: new-sizing(20);
+			.userinfo3-item {
+				width: new-sizing(167);
+				height:new-sizing(165);
+				background: $uni-bg-color;
+				border-radius: new-sizing(6);
+				@include flex(column);
+				justify-content: center;
+				box-sizing: border-box;
+				padding: new-sizing(10);
+				.name {
+					width: 100%;
+					text-align: left;
+					font-family: 'PingFang SC';
+					font-style: normal;
+					font-weight: 400;
+					font-size: new-sizing(14);
+					color: $uni-text-color;
+				}
+				.tips {
+					width: 100%;
+					text-align: left;
+					font-family: 'PingFang SC';
+					font-style: normal;
+					font-weight: 400;
+					font-size: new-sizing(10);
+					opacity: 0.6;
+					margin-bottom: new-sizing(10);
+				}
+				.imglist {
+					width: 100%;
+					height: new-sizing(94);
+					background: linear-gradient(131.43deg, #ffffff 10.63%, #ffe2e2 127.9%);
+					border-radius: new-sizing(6);
+					.img {
+						display: block;
+						width: new-sizing(110);
+						height: new-sizing(85);
+						margin: auto;
+					}
+				}
+				.imglist2 {
+					width: 100%;
+					height: new-sizing(94);
+					background: linear-gradient(125.58deg, #f3fbff 9.35%, #dbe5ff 82.49%);
+					border-radius: new-sizing(6);
+					.img {
+						width: new-sizing(80);
+						height: new-sizing(80);
+						display: block;
+						margin: auto;
+					}
+				}
+			}
+		}
+		.userinfo4 {
+			width: 100%;
+			background: $uni-bg-color;
+			border-radius: new-sizing(6);
+			margin: auto;
+			box-sizing: border-box;
+			padding: new-sizing(0) new-sizing(10);
+			.icon {
+				width: new-sizing(13);
+				height: new-sizing(13);
+			}
+		}
+		
+		.setup{
+			margin-top: new-sizing(10);
+			width: new-sizing(345);
+			height: new-sizing(50);
+			border: 1px solid rgba(0,0,0,0.2);
+			border-radius: new-sizing(6);
+			font-size: new-sizing(14);
+			font-family: PingFang SC;
+			font-weight: 600;
+			color: $uni-text-color;
+			line-height: new-sizing(48);
+		}
+	}
+	.footer-holder{
+		height: new-sizing(56);
+	}
+}
+.bagCodeShow{
+		width: new-sizing(329);height: new-sizing(201);
+		border-radius: new-sizing(20);
+		@include flex(column);
+		justify-content: space-around;
+		align-items: center;
+		background: linear-gradient(323.24deg, rgba(208, 160, 255, 0.61) 0.23%, rgba(186, 218, 255, 0.61) 42.74%, rgba(190, 184, 255, 0.61) 80.25%);
+		.input{
+			@include flex(row);
+			justify-content: center;
+			align-items: center;
+			width: new-sizing(249);height: new-sizing(46);
+			background: rgba(101, 86, 253, 0.2);
+		}
+		.btn{
+			width: 90%;
+			@include flex(row);
+			justify-content: space-between;
+			align-items: center;
+			.cancel{
+				width: new-sizing(102);
+				height: new-sizing(36);
+				background: rgba(51, 60, 79, 0.5);
+				border-radius: new-sizing(33);
+				color: $uni-text-color-inverse;
+				font-size: new-sizing(12);
+				line-height: new-sizing(36);
+			}
+			.confirm{
+				width: new-sizing(102);
+				height: new-sizing(36);
+				background: #6556FD;
+				border: 2px solid rgba(255, 255, 255, 0.3);
+				border-radius: new-sizing(33);
+				color: $uni-text-color-inverse;
+				font-size: new-sizing(12);
+				line-height: new-sizing(34);
+			}
+		}
+}
+button::after{ border: none; }
+

@@ -1,0 +1,136 @@
+//引入字体
+
+page {
+}
+
+@mixin font-style() {
+	font-size: sizing(28);
+	line-height: 1.5;
+	font-style: normal;
+	font-weight: 400;
+	font-family: PingFang SC-Bold, PingFangSC-Semibold, PingFang SC Regular, PingFangSC-Regular, PingFang SC, Microsoft Yahei, helvetica neue, hiragino sans gb, arial,
+		microsoft yahei ui, simsun, sans-serif;
+	color: #333c4f;
+	box-sizing: border-box;
+}
+// ::v-deep
+view,
+text,
+input {
+	@include font-style();
+}
+
+.pd-lr-15 {
+	padding: 0px sizing(30);
+}
+
+.ovh {
+	overflow: hidden;
+}
+.mar-t-5 {
+	margin-top: new-sizing(5);
+}
+.mar-t-10 {
+	margin-top: new-sizing(10);
+}
+.mar-t-15 {
+	margin-top: new-sizing(15);
+}
+
+.mar-l-10 {
+	margin-left: new-sizing(10);
+}
+
+.mar-l-5 {
+	margin-left: new-sizing(5);
+}
+
+.f-row {
+	@include flex(row);
+}
+.f-col {
+	@include flex(column);
+}
+
+.j-c-sb {
+	justify-content: space-between;
+}
+.j-c-c {
+	justify-content: center;
+}
+.a-i-c {
+	align-items: center;
+} 
+
+
+//u-transition fade 动画抖动
+.u-fade-enter,
+.u-fade-leave-to {
+	opacity: 0;
+	//抖动问题
+	display: none;
+}
+
+//自定义uview
+//uToast提示背景
+$u-toast-border-background-color: rgba(0, 0, 0, 0.5);
+//错误图片背景色
+$u-image-error-background-color:transparent;
+
+//u-modal 弹出层
+::v-deep {
+	.dola-box-modal {
+		.u-popup__content {
+			background: linear-gradient(323.24deg, rgba(208, 160, 255, 0.49) 0.23%, rgba(186, 218, 255, 0.49) 42.74%, rgba(171, 255, 245, 0.49) 80.25%);
+			backdrop-filter: blur(new-sizing(26));
+			border-radius: new-sizing(10);
+		}
+		&.associate-modal .u-modal__content {
+			padding-top: 0 !important;
+			padding-bottom: 0 !important;
+			margin-top: 25px;
+			margin-bottom: 25px;
+		}
+		.u-modal__title {
+			font-size: new-sizing(18);
+			line-height: new-sizing(25);
+			color: #ffffff;
+		}
+		.u-line {
+			display: none;
+		}
+		.u-modal__button-group {
+			@include flex(row);
+			justify-content: space-around;
+			align-items: center;
+			margin-bottom: new-sizing(25);
+		}
+		.u-modal__button-group__wrapper--cancel,
+		.u-modal__button-group__wrapper--confirm {
+			min-width: new-sizing(100);
+			height: new-sizing(36);
+			background: rgba(51, 60, 79, 0.64);
+			border-radius: 33px;
+			color: #fff;
+			padding: 0 new-sizing(10);
+			flex: none;
+
+			.u-modal__button-group__wrapper__text {
+				@include flex(row);
+				justify-content: center;
+				align-items: center;
+				color: #fff !important;
+				font-size: new-sizing(13);
+				line-height: new-sizing(18);
+			}
+		}
+		.u-modal__button-group__wrapper--confirm {
+			background: linear-gradient(98.65deg, #6cebd4 29.71%, #3fdce6 86.05%);
+			border: new-sizing(2) solid rgba(255, 255, 255, 0.3);
+		}
+	}
+}
+
+::v-deep uni-toast {
+	z-index: 999999999999;
+}

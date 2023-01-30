@@ -1,0 +1,116 @@
+.header{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	background-color: $uni-bg-color;
+	.page-header {
+		@include flex(row);height: new-sizing(36);
+		align-items: center;
+		padding: 0 new-sizing(15);
+		position: relative;
+		background-color: linear-gradient(119.4deg, #87D3FF 13.53%, #99A9FF 65.51%, #3F7CFF 111.38%);
+		.back {
+			@include flex(row);
+			justify-content: center;
+			align-items: center;
+			.icon {
+				width: new-sizing(28);
+				height: new-sizing(28);
+			}
+		}
+		.title {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			.text {
+				font-size: new-sizing(18);
+				line-height: new-sizing(25);
+			}
+		}
+	}
+}
+.header-holder{
+	height: new-sizing(36);
+}
+.selllist{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		flex-flow: column;
+		position: relative;
+		margin-top: new-sizing(10);
+	.selllist-item{
+		width: new-sizing(345);min-height: new-sizing(99);
+		background: $uni-bg-color;
+		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+		box-sizing: border-box;
+		border-radius: new-sizing(6);
+		margin-bottom: new-sizing(20);
+		@include flex(row);
+		flex-flow: wrap;
+		padding: new-sizing(10);
+		.img{
+			width: new-sizing(86);height: new-sizing(86);
+			display: block;
+			border-radius: new-sizing(5);
+		}
+		.content{
+			width: 72%;
+			font-family: 'PingFang SC';
+			font-size: new-sizing(14);
+			color: $uni-text-color;
+			@include flex(column)
+			justify-content: space-between;
+			padding-left: new-sizing(10);
+			@include ellipsis();
+			.name{
+				width: 100%;
+				font-weight: 800;
+				font-size: new-sizing(15);
+				opacity: 1;
+				@include ellipsis();
+			}
+			.time{
+				width: 100%;
+				font-size: new-sizing(12);
+				opacity: 0.7;
+				@include ellipsis();
+			}
+			.price{
+				width: 100%;
+				padding-left: new-sizing(4);
+				color: #6556FD;
+				font-weight: 800;
+				@include ellipsis();
+				.price-icon{
+					font-weight: 800;
+					color: #6556FD;
+					font-size: new-sizing(8);
+				}
+			}
+		}
+	}
+	.empty{
+		// position: absolute;
+		// top: 0;left: 0; right: 0;bottom:0;margin: auto;
+	}
+}
+.footer-holder{
+	height: new-sizing(48);
+}
+.look{
+		width: 100%;height: new-sizing(48);
+		background: #6556FD;
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		box-shadow: 0px 3px 4px rgba(101, 86, 253, 0.1);
+		font-family: 'PingFang SC';
+		font-size: new-sizing(14);
+		line-height: new-sizing(44);
+		color: $uni-text-color-inverse;
+		position: fixed;
+		left: new-sizing(0);right: new-sizing(0);bottom: new-sizing(0);
+		margin: auto;
+	}
+	.look::after{ border: none;} 

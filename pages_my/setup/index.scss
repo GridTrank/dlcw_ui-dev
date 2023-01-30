@@ -1,0 +1,132 @@
+.page-header {
+	@include flex(row);height: new-sizing(36);
+	align-items: center;
+	padding: 0 new-sizing(15);
+	position: relative;
+	background-color: linear-gradient(119.4deg, #87D3FF 13.53%, #99A9FF 65.51%, #3F7CFF 111.38%);
+	.back {
+		@include flex(row);
+		justify-content: center;
+		align-items: center;
+		.icon {
+			width: new-sizing(28);
+			height: new-sizing(28);
+		}
+	}
+	.title {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		.text {
+			font-size: new-sizing(18);
+			line-height: new-sizing(25);
+		}
+	}
+}
+.content{
+	width: 100%;
+	padding:new-sizing(20);
+}
+.tt{
+		font-family: 'PingFang SC';
+		font-size: new-sizing(12);
+		color: $uni-text-color;
+		opacity: 0.5;
+		margin-top: new-sizing(10);
+	}
+	.tt2{
+		margin-top: new-sizing(30);
+	}
+	.t-title{
+		font-family:'PingFang SC';
+		font-size: new-sizing(15);
+		font-weight: 400;
+		color: $uni-text-color;
+	}
+	.t-value{
+		text-align: right;
+		width: new-sizing(140);
+		font-family: 'PingFang SC';
+		font-style: normal;
+		font-weight: 400;
+		font-size: new-sizing(15);
+		color: $uni-text-color;
+		opacity: 0.7;
+		@include ellipsis()
+	}
+	.t-label{
+		font-family: 'PingFang SC';
+		font-style: normal;
+		font-weight: 400;
+		font-size: new-sizing(10);
+		color: $uni-text-color;
+		opacity: 0.8;
+	}
+	.t-copy{
+		width: new-sizing(16);height: new-sizing(16);
+	}
+	.userimg{
+		width: new-sizing(40);height: new-sizing(40);
+		border-radius: 50%;
+	}
+	.logout{
+		position: fixed;
+		width: new-sizing(375);
+		height: new-sizing(56);
+		left: new-sizing(0);
+		bottom: new-sizing(0);
+		background: #6556FD;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		box-shadow: 0px 3px 4px rgba(101, 86, 253, 0.1);
+		font-family: 'PingFang SC';
+		font-style: normal;
+		font-weight: 400;
+		font-size: new-sizing(14);
+		line-height: new-sizing(54);
+		color: $uni-bg-color;
+	}
+	.logout::after{ border: none;} 
+	.imgchoose{
+		box-sizing: border-box;
+		padding: 10px;
+		@include flex(column);
+		justify-content: space-between;
+		align-items: center;
+		.imgchoose-img{
+			width: new-sizing(200);
+			height: new-sizing(200);
+			margin-bottom: new-sizing(10);
+		}
+		.imgchoose-button{
+			width: 100%;
+			height: new-sizing(56);
+			background: #6556FD;
+			font-size: new-sizing(14);
+			line-height: new-sizing(56);
+			border-radius: new-sizing(5);
+			margin-top: 10px;
+			font-family: 'PingFang SC';
+			font-style: normal;
+			font-weight: 400;
+			color: $uni-text-color-inverse;
+		}
+	}
+	.getphoneshow{
+		width: 100%;
+		height: new-sizing(112);
+		.getphone{
+			width: new-sizing(375);
+			height: new-sizing(56);
+			background: linear-gradient(98.65deg, #6CEBD4 29.71%, #3FDCE6 86.05%);
+			border: new-sizing(1) solid rgba(255, 255, 255, 0.3);
+			box-shadow: new-sizing(0) new-sizing(3) new-sizing(4) rgba(26, 205, 184, 0.18);
+			font-family: 'PingFang SC';
+			font-style: normal;
+			font-weight: 400;
+			font-size: new-sizing(14);
+			line-height: new-sizing(54);
+			color: $uni-bg-color;
+		}
+	}
+	

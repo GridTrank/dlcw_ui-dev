@@ -1,0 +1,79 @@
+.page-message_box {
+	.page-header {
+		@include flex(row);
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 new-sizing(15);
+		height: new-sizing(32);
+		
+		//小程序内
+		/*  #ifdef  MP-WEIXIN */
+		height: 32px;
+		/*  #endif */
+		.back {
+			@include flex(row);
+			justify-content: center;
+			align-items: center;
+			.icon {
+				width: new-sizing(28);
+				height: new-sizing(28);
+			}
+		}
+		.title {
+			@include flex(row);
+			justify-content: center;
+			align-items: center;
+			.text {
+				font-size: new-sizing(18);
+				line-height: new-sizing(25);
+			}
+		}
+		.tmp {
+			color: transparent;
+		}
+	}
+
+	.wrap {
+		margin-top: new-sizing(15);
+		padding: 0 new-sizing(15);
+		.list-wrap {
+			.item {
+				@include flex(row);
+				background: #ffffff;
+				box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+				border-radius: 6px;
+				padding: new-sizing(8);
+				margin-bottom: new-sizing(15);
+				position: relative;
+			}
+			.image {
+				@include square-image(50);
+				background: rgba(70, 114, 170, 0.05);
+				border-radius: new-sizing(6);
+				@include flex(row);
+				align-items: center;
+				justify-content: center;
+				.icon {
+					@include square-image(35);
+					border-radius: new-sizing(6);
+				}
+			}
+			.title {
+				font-size: new-sizing(11);
+				line-height: new-sizing(15);
+				opacity: 0.7;
+			}
+			.des {
+				font-size: new-sizing(13);
+				line-height: new-sizing(18);
+			}
+			.unread {
+				position: absolute;
+				top: new-sizing(8);
+				right: new-sizing(8);
+				@include circle-image(6);
+				background: #ef6130;
+			}
+		}
+	}
+}
